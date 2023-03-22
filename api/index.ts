@@ -2,6 +2,12 @@ import * as http from "http";
 import App from "./app";
 import { Logger } from "./logger/logger";
 
+// import * as dotenv from 'dotenv';
+// const result = dotenv.config({ path: __dirname+'/./.env', debug: true });
+// if (result.error) {
+//     throw result.error;
+// }
+
 const port = 3080;
 
 App.set("port", port);

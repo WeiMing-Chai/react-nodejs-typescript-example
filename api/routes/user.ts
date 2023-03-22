@@ -2,6 +2,9 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import { Logger } from "../logger/logger";
 
+import taskRepository from '../repository/task.repository';
+
+
 class User {
 
     public express: express.Application;
@@ -29,7 +32,7 @@ class User {
         // request to get all the users
         this.express.get("/users", (req, res, next) => {
             this.logger.info("url:" + req.url);
-            res.json(this.users);
+            taskRepository.getUsers().then(data => res.json(data));
         });
 
         // request to get all the users by userName
