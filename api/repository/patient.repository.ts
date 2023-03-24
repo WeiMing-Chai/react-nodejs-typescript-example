@@ -16,28 +16,28 @@ class TaskRepository {
 
         this.db = connect();
         // For Development
-        this.db.sequelize.sync({ force: true }).then(() => {
-            console.log("Drop and re-sync db.");
-        });
+        // this.db.sequelize.sync({ force: true }).then(() => {
+        //     console.log("Drop and re-sync db.");
+        // });
     }
 
-    async getUsers() {
+    async getPatients() {
         
         try {
-            const users = await this.db.users.findAll();
-            console.log('users:::', users);
-            return users;
+            const patients = await this.db.patient.findAll();
+            console.log('patients:::', patients);
+            return patients;
         } catch (err) {
             console.log(err);
             return [];
         }
     }
 
-    async createTask(task: any) {
+    async createPatient(new_patient: any) {
         let data = {};
         try {
-            task.createdate = new Date().toISOString();
-            data = await this.db.tasks.create(task);
+            new_patient.createdat = new Date().toISOString();
+            data = await this.db.patient.create(new_patient);
         } catch(err) {
             this.logger.error('Error::' + err);
         }
@@ -47,7 +47,7 @@ class TaskRepository {
     async updateTask(task: any) {
         let data = {};
         try {
-            task.updateddate = new Date().toISOString();
+            task.updatedat = new Date().toISOString();
             data = await this.db.tasks.update({...task}, {
                 where: {
                     id: task.id

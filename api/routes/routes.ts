@@ -1,15 +1,15 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
 import { Logger } from "../logger/logger";
-import User from "./user";
+import Patient from "./patient";
 
 class Routes {
 
     public express: express.Application;
     public logger: Logger;
 
-    // array to hold users
-    public users: any[];
+    // array to hold patients
+    public patients: any[];
 
     constructor() {
         this.express = express();
@@ -26,8 +26,8 @@ class Routes {
 
     private routes(): void {
 
-        // user route
-        this.express.use("/", User);
+        // patient route
+        this.express.use("/", Patient);
     }
 }
 

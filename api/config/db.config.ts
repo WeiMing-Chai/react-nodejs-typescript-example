@@ -1,5 +1,5 @@
 import { Sequelize, Model, DataTypes, Dialect, OperatorsAliases } from "sequelize";
-import model from "../model/user.model";
+import model from "../model/patient.model";
 
 const connect = () => {
 
@@ -25,12 +25,15 @@ const connect = () => {
             min: 0,
             acquire: 20000,
             idle: 5000
+        },
+        define: {
+            timestamps: false
         }
     });
 
     const db = {
         sequelize: sequelize,
-        users: model(sequelize, DataTypes, Model)
+        patient: model(sequelize, DataTypes, Model)
     };
 
     return db;

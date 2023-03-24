@@ -2,15 +2,15 @@ import { Sequelize } from "sequelize";
 
 export default (sequelize: Sequelize, DataTypes: { STRING: any; DATE: any; }, Model: any) => {
 
-    class Users extends Model {}
+    class Patient extends Model {}
 
-    Users.init({
+    Patient.init({
         // Model attributes are defined here
-        id: {
-          type: DataTypes.STRING,
-          primaryKey: true,
-          allowNull: false
-        },
+        // id: {
+        //   type: DataTypes.STRING,
+        //   primaryKey: true,
+        //   allowNull: false
+        // },
         firstname: {
           type: DataTypes.STRING,
           allowNull: false
@@ -23,19 +23,19 @@ export default (sequelize: Sequelize, DataTypes: { STRING: any; DATE: any; }, Mo
           type: DataTypes.STRING,
           allowNull: false
         },
-        // createdate: {
-        //   type: DataTypes.DATE
-        //   // allowNull defaults to true
-        // },
-        // updateddate: {
-        //     type: DataTypes.DATE
-        //     // allowNull defaults to true
-        // }
+        createdat: {
+          type: DataTypes.DATE
+          // allowNull defaults to true
+        },
+        updatedat: {
+            type: DataTypes.DATE
+            // allowNull defaults to true
+        }
       }, {
         // Other model options go here
         sequelize, // We need to pass the connection instance
-        modelName: 'users' // We need to choose the model name
+        modelName: 'patient' // We need to choose the model name
       });
       
-      return Users;
+      return Patient;
 }

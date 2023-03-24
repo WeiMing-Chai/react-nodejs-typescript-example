@@ -34,9 +34,9 @@ class App extends Component {
   onChangeForm = (e) => {
       let user = this.state.user
       if (e.target.name === 'firstname') {
-          user.firstName = e.target.value;
+          user.firstname = e.target.value;
       } else if (e.target.name === 'lastname') {
-          user.lastName = e.target.value;
+          user.lastname = e.target.value;
       } else if (e.target.name === 'email') {
           user.email = e.target.value;
       }

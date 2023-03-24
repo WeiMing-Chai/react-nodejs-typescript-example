@@ -2,7 +2,7 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import { Logger } from "../logger/logger";
 
-import taskRepository from '../repository/task.repository';
+import patientRepository from '../repository/patient.repository';
 
 
 class User {
@@ -10,14 +10,14 @@ class User {
     public express: express.Application;
     public logger: Logger;
 
-    // array to hold users
-    public users: any[];
+    // array to hold patients
+    public patients: any[];
 
     constructor() {
         this.express = express();
         this.middleware();
         this.routes();
-        this.users = [];
+        this.patients = [];
         this.logger = new Logger();
     }
 
@@ -30,15 +30,15 @@ class User {
     private routes(): void {
 
         // request to get all the users
-        this.express.get("/users", (req, res, next) => {
+        this.express.get("/patients", (req, res, next) => {
             this.logger.info("url:" + req.url);
-            taskRepository.getUsers().then(data => res.json(data));
+            patientRepository.getPatients().then(data => res.json(data));
         });
 
         // request to get all the users by userName
         this.express.get("/users/:userName", (req, res, next) => {
             this.logger.info("url:::::" + req.url);
-            const user = this.users.filter(function(user) {
+            const user = this.patients.filter(function(user) {
                 if (req.params.userName === user.userName) {
                     return user;
                 }
@@ -46,12 +46,11 @@ class User {
             res.json(user);
         });
 
-        // request to post the user
-        // req.body has object of type {firstName:"fnam1",lastName:"lnam1",userName:"username1"}
-        this.express.post("/user", (req, res, next) => {
+        // request to post the patients
+        this.express.post("/patient", (req, res, next) => {
             this.logger.info("url:::::::" + req.url);
-            this.users.push(req.body.user);
-            res.json(this.users);
+            this.patients.push(req.body.patient);
+            patientRepository.createPatient(req.body.patient).then(data => res.json(data));
         });
     }
 }
