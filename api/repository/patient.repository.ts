@@ -1,4 +1,5 @@
-import connect from '../config/db.config';
+// import connect from '../config/db.config';
+import prisma from "../config/prisma";
 import { Logger } from "../logger/logger";
 
 
@@ -6,25 +7,14 @@ class TaskRepository {
 
     public logger: Logger;
 
-    // TODO: look at this
-    db: any = {
-        
-    };
-
     constructor() {
         this.logger = new Logger();
-
-        this.db = connect();
-        // For Development
-        // this.db.sequelize.sync({ force: true }).then(() => {
-        //     console.log("Drop and re-sync db.");
-        // });
     }
 
     async getPatients() {
         
         try {
-            const patients = await this.db.patient.findAll();
+            const patients = await prisma.patients.findMany();
             console.log('patients:::', patients);
             return patients;
         } catch (err) {
@@ -37,21 +27,8 @@ class TaskRepository {
         let data = {};
         try {
             new_patient.createdat = new Date().toISOString();
-            data = await this.db.patient.create(new_patient);
-        } catch(err) {
-            this.logger.error('Error::' + err);
-        }
-        return data;
-    }
-
-    async updateTask(task: any) {
-        let data = {};
-        try {
-            task.updatedat = new Date().toISOString();
-            data = await this.db.tasks.update({...task}, {
-                where: {
-                    id: task.id
-                }
+            data = await prisma.patients.create({
+                data: new_patient
             });
         } catch(err) {
             this.logger.error('Error::' + err);
@@ -59,20 +36,35 @@ class TaskRepository {
         return data;
     }
 
-    async deleteTask(taskId: string) {
-        let data = {};
-        try {
-            data = await this.db.tasks.destroy({
-                where: {
-                    id: taskId
-                }
-            });
-        } catch(err) {
-            this.logger.error('Error::' + err);
-        }
-        return data;
-        // return {status: `${data.deletedCount > 0 ? true : false}`};
-    }
+    // async updateTask(task: any) {
+    //     let data = {};
+    //     try {
+    //         task.updatedat = new Date().toISOString();
+    //         data = await this.db.tasks.update({...task}, {
+    //             where: {
+    //                 id: task.id
+    //             }
+    //         });
+    //     } catch(err) {
+    //         this.logger.error('Error::' + err);
+    //     }
+    //     return data;
+    // }
+
+    // async deleteTask(taskId: string) {
+    //     let data = {};
+    //     try {
+    //         data = await this.db.tasks.destroy({
+    //             where: {
+    //                 id: taskId
+    //             }
+    //         });
+    //     } catch(err) {
+    //         this.logger.error('Error::' + err);
+    //     }
+    //     return data;
+    //     // return {status: `${data.deletedCount > 0 ? true : false}`};
+    // }
 
 }
 
