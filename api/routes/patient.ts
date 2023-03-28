@@ -35,23 +35,24 @@ class User {
             patientRepository.getPatients().then(data => res.json(data));
         });
 
-        // request to get all the users by userName
-        this.express.get("/users/:userName", (req, res, next) => {
-            this.logger.info("url:::::" + req.url);
-            const user = this.patients.filter(function(user) {
-                if (req.params.userName === user.userName) {
-                    return user;
-                }
-            });
-            res.json(user);
-        });
-
         // request to post the patients
         this.express.post("/patient", (req, res, next) => {
             this.logger.info("url:::::::" + req.url);
             this.patients.push(req.body.patient);
             patientRepository.createPatient(req.body.patient).then(data => res.json(data));
         });
+
+        // // request to get all the users by userName
+        // this.express.get("/users/:userName", (req, res, next) => {
+        //     this.logger.info("url:::::" + req.url);
+        //     const user = this.patients.filter(function(user) {
+        //         if (req.params.userName === user.userName) {
+        //             return user;
+        //         }
+        //     });
+        //     res.json(user);
+        // });
+
     }
 }
 

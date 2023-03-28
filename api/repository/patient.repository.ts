@@ -1,9 +1,9 @@
 // import connect from '../config/db.config';
-import prisma from "../config/prisma";
+import prisma from "../prisma/prisma";
 import { Logger } from "../logger/logger";
 
 
-class TaskRepository {
+class PatientRepository {
 
     public logger: Logger;
 
@@ -26,7 +26,7 @@ class TaskRepository {
     async createPatient(new_patient: any) {
         let data = {};
         try {
-            new_patient.createdat = new Date().toISOString();
+            // new_patient.createdat = new Date().toISOString();
             data = await prisma.patients.create({
                 data: new_patient
             });
@@ -68,4 +68,4 @@ class TaskRepository {
 
 }
 
-export default new TaskRepository();
+export default new PatientRepository();

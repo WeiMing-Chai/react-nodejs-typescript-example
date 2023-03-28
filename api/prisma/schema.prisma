@@ -12,6 +12,6 @@ model patients {
   firstname String    @db.Char(100)
   lastname  String    @db.Char(100)
   email     String    @db.Char(100)
-  createdat DateTime? @db.Date
-  updatedat DateTime? @db.Date
+  createdat DateTime? @db.Date @default(now())
+  updatedat DateTime? @db.Date @updatedAt
 }
