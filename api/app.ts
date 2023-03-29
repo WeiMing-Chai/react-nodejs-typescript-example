@@ -1,13 +1,12 @@
 import * as bodyParser from "body-parser";
-import * as express from "express";
-import { Logger } from "./logger/logger";
+import express from "express";
+import logger from "./logger/logger";
 import Routes from "./routes/routes";
 const path = require('path');
 
 class App {
 
     public express: express.Application;
-    public logger: Logger;
 
     // array to hold patients
     public patients: any[];
@@ -17,7 +16,6 @@ class App {
         this.middleware();
         this.routes();
         this.patients = [];
-        this.logger = new Logger();
     }
 
     // Configure Express middleware.

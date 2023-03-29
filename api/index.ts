@@ -1,6 +1,6 @@
 import * as http from "http";
 import App from "./app";
-import { Logger } from "./logger/logger";
+import logger from "./logger/logger";
 
 // import * as dotenv from 'dotenv';
 // const result = dotenv.config({ path: __dirname+'/./.env', debug: true });
@@ -14,10 +14,11 @@ App.set("port", port);
 const server = http.createServer(App);
 server.listen(port);
 
-const logger = new Logger();
-
 server.on("listening", function(): void {
     const addr = server.address();
+    if (addr == null) {
+        return
+    }
     const bind = (typeof addr === "string") ? `pipe ${addr}` : `port ${addr.port}`;
     logger.info(`Listening on ${bind}`);
  });

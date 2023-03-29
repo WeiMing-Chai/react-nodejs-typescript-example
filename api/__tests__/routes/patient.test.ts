@@ -1,5 +1,5 @@
 import { json } from "sequelize";
-import * as request from "supertest";
+import request from "supertest";
 
 import app from "../../app";
 import patientRepository from '../../repository/patient.repository';

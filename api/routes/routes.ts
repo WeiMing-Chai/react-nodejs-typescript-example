@@ -1,12 +1,11 @@
 import * as bodyParser from "body-parser";
-import * as express from "express";
-import { Logger } from "../logger/logger";
+import express from "express";
+import logger from "../logger/logger";
 import Patient from "./patient";
 
 class Routes {
 
     public express: express.Application;
-    public logger: Logger;
 
     // array to hold patients
     public patients: any[];
@@ -15,7 +14,6 @@ class Routes {
         this.express = express();
         this.middleware();
         this.routes();
-        this.logger = new Logger();
     }
 
     // Configure Express middleware.

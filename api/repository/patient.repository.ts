@@ -1,24 +1,18 @@
 // import connect from '../config/db.config';
 import prisma from "../prisma/prisma";
-import { Logger } from "../logger/logger";
+import logger from "../logger/logger";
 
 
 class PatientRepository {
-
-    public logger: Logger;
-
-    constructor() {
-        this.logger = new Logger();
-    }
 
     async getPatients() {
         
         try {
             const patients = await prisma.patients.findMany();
-            console.log('patients:::', patients);
+            logger.info('patients:::', patients);
             return patients;
         } catch (err) {
-            console.log(err);
+            logger.error('Error::' + err);
             return [];
         }
     }
@@ -31,7 +25,7 @@ class PatientRepository {
                 data: new_patient
             });
         } catch(err) {
-            this.logger.error('Error::' + err);
+            logger.error('Error::' + err);
         }
         return data;
     }
