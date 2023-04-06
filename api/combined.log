@@ -1,3 +1,96 @@
 {"level":"info","message":"Listening on port 3080","service":"user-service"}
 {"level":"info","message":"url:/patients","service":"user-service"}
 {"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 3080","service":"user-service"}
+{"level":"info","message":"Listening on port 3082","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:::::::/patient","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 3082","service":"user-service"}
+{"level":"info","message":"Listening on port 3082","service":"user-service"}
+{"level":"info","message":"Listening on port 3082","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 3080","service":"user-service"}
+{"level":"info","message":"Listening on port 3080","service":"user-service"}
+{"level":"info","message":"Listening on port 3080","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 4080","service":"user-service"}
+{"level":"info","message":"Listening on port 4100","service":"user-service"}
+{"level":"info","message":"Listening on port 4100","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 4100","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"0":{"createdat":null,"email":"weiming@gmail.com","firstname":"first1","id":5,"lastname":"last1","updatedat":null},"1":{"createdat":null,"email":"2@mail.com","firstname":"first2","id":6,"lastname":"last2","updatedat":null},"level":"info","message":"patients:::","service":"user-service"}
+{"level":"info","message":"Listening on port 4100","service":"user-service"}
+{"level":"info","message":"Listening on port 4100","service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"event":"RetrievePatient","outcome":1},"service":"user-service"}
+{"level":"info","message":"url:::::::/patient","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Registering new patient","event":"RegisterPatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:::::::/patient","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Registering new patient","event":"RegisterPatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}
+{"level":"info","message":"url:/patients","service":"user-service"}
+{"level":"info","message":{"application_id":"family_clinic_backend","description":"Retrieving all patient data information","event":"RetrievePatient","from":null,"ip_address":"0.0.0.0","level":"1","outcome":1,"to":null,"user_id":"123"},"service":"user-service"}

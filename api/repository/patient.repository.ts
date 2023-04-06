@@ -9,7 +9,18 @@ class PatientRepository {
         
         try {
             const patients = await prisma.patients.findMany();
-            logger.info('patients:::', patients);
+            const information_logged = {
+                "user_id": "123",
+                "event": "RetrievePatient",
+                "outcome": 1,
+                "ip_address": "0.0.0.0",
+                "application_id": "family_clinic_backend",
+                "level": "1",
+                "description": "Retrieving all patient data information",
+                "from": null,
+                "to": null,
+            }
+            logger.info(information_logged);
             return patients;
         } catch (err) {
             logger.error('Error::' + err);
@@ -24,6 +35,18 @@ class PatientRepository {
             data = await prisma.patients.create({
                 data: new_patient
             });
+            const information_logged = {
+                "user_id": "123",
+                "event": "RegisterPatient",
+                "outcome": 1,
+                "ip_address": "0.0.0.0",
+                "application_id": "family_clinic_backend",
+                "level": "1",
+                "description": "Registering new patient",
+                "from": null,
+                "to": null,
+            }
+            logger.info(information_logged);
         } catch(err) {
             logger.error('Error::' + err);
         }

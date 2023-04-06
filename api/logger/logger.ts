@@ -1,21 +1,6 @@
-// export class Logger {
-
-//     constructor() {}
-
-//     public info(logText: string): void {
-//         console.log(new Date() + "info:::::" + logText);
-//     }
-
-//     public debug(logText: string): void {
-//         console.log(new Date() + "debug:::::" + logText);
-//     }
-
-//     public error(logText: string): void {
-//         console.log(new Date() + "error:::::" + logText);
-//     }
-// }
-
 import winston from 'winston';
+import LokiTransport from 'winston-loki';
+
 
 const logger = winston.createLogger({
   level: 'info',
@@ -28,6 +13,14 @@ const logger = winston.createLogger({
     //
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
     new winston.transports.File({ filename: 'combined.log' }),
+    new LokiTransport({
+      host: "http://localhost:3100",
+      labels: {app: 'family_clinic'},
+      json: true,
+      format: winston.format.json(),
+      replaceTimestamp: true,
+      onConnectionError: (err) => console.error(err)
+    })
   ],
 });
 

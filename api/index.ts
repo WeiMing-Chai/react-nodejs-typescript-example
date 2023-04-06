@@ -8,7 +8,7 @@ import logger from "./logger/logger";
 //     throw result.error;
 // }
 
-const port = 3080;
+const port = 4100;
 
 App.set("port", port);
 const server = http.createServer(App);
@@ -20,7 +20,7 @@ server.on("listening", function(): void {
         return
     }
     const bind = (typeof addr === "string") ? `pipe ${addr}` : `port ${addr.port}`;
-    logger.info(`Listening on ${bind}`);
+    // logger.info(`Listening on ${bind}`);
  });
 
 module.exports = App;
