@@ -1,5 +1,7 @@
 import { prismaMock } from '../../__mocks__/prisma/singleton'
+import { mockWinston } from '../../__mocks__/logger/singleton';
 
+mockWinston();
 
 test('should get all patients ', async () => {
   const patient = [

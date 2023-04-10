@@ -1,4 +1,3 @@
-import { json } from "sequelize";
 import request from "supertest";
 
 import app from "../../app";
