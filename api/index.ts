@@ -8,7 +8,7 @@ import logger from "./logger/logger";
 //     throw result.error;
 // }
 
-const port = 4100;
+const port = 4200;
 
 App.set("port", port);
 const server = http.createServer(App);

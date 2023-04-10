@@ -1,0 +1,8 @@
+{
+    "realm": "predictz-realm",
+    "auth-server-url": "http://192.168.1.118:8080/",
+    "ssl-required": "external",
+    "resource": "predictz-gateway-client",
+    "public-client": true,
+    "confidential-port": 0
+  }

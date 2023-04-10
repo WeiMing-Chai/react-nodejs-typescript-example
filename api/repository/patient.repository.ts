@@ -1,7 +1,8 @@
 // import connect from '../config/db.config';
+
 import prisma from "../prisma/prisma";
 import logger from "../logger/logger";
-
+import { EventType, EventOutcome, Level } from "../enum/constants";
 
 class PatientRepository {
 
@@ -11,11 +12,11 @@ class PatientRepository {
             const patients = await prisma.patients.findMany();
             const information_logged = {
                 "user_id": "123",
-                "event": "RetrievePatient",
-                "outcome": 1,
+                "event": EventType.retrievePatient,
+                "outcome": EventOutcome.success,
                 "ip_address": "0.0.0.0",
-                "application_id": "family_clinic_backend",
-                "level": "1",
+                "application_id": process.env.APPLICATION_ID,
+                "level": Level.level0,
                 "description": "Retrieving all patient data information",
                 "from": null,
                 "to": null,
@@ -37,11 +38,11 @@ class PatientRepository {
             });
             const information_logged = {
                 "user_id": "123",
-                "event": "RegisterPatient",
-                "outcome": 1,
+                "event": EventType.registerPatient,
+                "outcome": EventOutcome.success,
                 "ip_address": "0.0.0.0",
-                "application_id": "family_clinic_backend",
-                "level": "1",
+                "application_id": process.env.APPLICATION_ID,
+                "level": Level.level0,
                 "description": "Registering new patient",
                 "from": null,
                 "to": null,
