@@ -1,11 +1,21 @@
 import React from 'react'
 
-export const Users = ({users}) => {
+interface User {
+firstname: string;
+lastname: string;
+email: string;
+}
 
-    console.log('users length:::', users.length)
-    if (users.length === 0) return null
+interface UserProps {
+    users: User[];
+}
 
-    const UserRow = (user,index) => {
+export const Users = (props: UserProps) => {
+
+    console.log('users length:::', props.users.length)
+    if (props.users.length === 0) return null
+
+    const UserRow = (user: {firstname: string, lastname: string, email: string}, index: number) => {
 
         return(
               <tr key = {index} className={index%2 === 0?'odd':'even'}>
@@ -17,7 +27,7 @@ export const Users = ({users}) => {
           )
     }
 
-    const userTable = users.map((user,index) => UserRow(user,index))
+    const userTable = props.users.map((user,index) => UserRow(user,index))
 
     return(
         <div className="container">

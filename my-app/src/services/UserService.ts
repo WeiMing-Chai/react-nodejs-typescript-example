@@ -5,7 +5,7 @@ export async function getAllUsers() {
     return await response.json();
 }
 
-export async function createUser(data) {
+export async function createUser(data: {firstname: string, lastname: string, email: string}) {
     const response = await fetch(`/api/patient`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
