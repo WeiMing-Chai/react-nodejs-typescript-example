@@ -29,13 +29,13 @@ class User {
 
         // request to get all the users
         this.express.get("/patients", (req, res, next) => {
-            patientRepository.getPatients().then(data => res.json(data));
+            patientRepository.getPatients(req).then(data => res.json(data));
         });
 
         // request to post the patients
         this.express.post("/patient", (req, res, next) => {
             this.patients.push(req.body.patient);
-            patientRepository.createPatient(req.body.patient).then(data => res.json(data));
+            patientRepository.createPatient(req).then(data => res.json(data));
         });
 
         // // request to get all the users by userName
