@@ -1,13 +1,12 @@
 import * as bodyParser from "body-parser";
 import express from "express";
-import logger from "./logger/logger";
 import Routes from "./routes/routes";
-const path = require('path');
+var cors = require('cors');
 
 class App {
 
     public express: express.Application;
-
+    
     // array to hold patients
     public patients: any[];
 
@@ -20,9 +19,10 @@ class App {
 
     // Configure Express middleware.
     private middleware(): void {
+        this.express.use(cors())
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
-        this.express.use(express.static(process.cwd() + "/my-app/build/"));
+        this.express.use(express.static(process.cwd() + "/my-app/build/"));   
     }
 
     private routes(): void {

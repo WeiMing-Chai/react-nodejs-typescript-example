@@ -1,9 +1,9 @@
 import React from 'react'
 
 interface User {
-firstname: string;
-lastname: string;
-email: string;
+    firstname: string;
+    lastname: string;
+    email: string;
 }
 
 interface UserProps {
@@ -12,7 +12,6 @@ interface UserProps {
 
 export const Users = (props: UserProps) => {
 
-    console.log('users length:::', props.users.length)
     if (props.users.length === 0) return null
 
     const UserRow = (user: {firstname: string, lastname: string, email: string}, index: number) => {
