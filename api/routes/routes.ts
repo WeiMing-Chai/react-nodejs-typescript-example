@@ -1,6 +1,5 @@
 import * as bodyParser from "body-parser";
 import express from "express";
-import logger from "../logger/logger";
 import Patient from "./patient";
 
 class Routes {

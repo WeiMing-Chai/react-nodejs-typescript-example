@@ -55,37 +55,6 @@ class PatientRepository {
         }
         return data;
     }
-
-    // async updateTask(task: any) {
-    //     let data = {};
-    //     try {
-    //         task.updatedat = new Date().toISOString();
-    //         data = await this.db.tasks.update({...task}, {
-    //             where: {
-    //                 id: task.id
-    //             }
-    //         });
-    //     } catch(err) {
-    //         this.logger.error('Error::' + err);
-    //     }
-    //     return data;
-    // }
-
-    // async deleteTask(taskId: string) {
-    //     let data = {};
-    //     try {
-    //         data = await this.db.tasks.destroy({
-    //             where: {
-    //                 id: taskId
-    //             }
-    //         });
-    //     } catch(err) {
-    //         this.logger.error('Error::' + err);
-    //     }
-    //     return data;
-    //     // return {status: `${data.deletedCount > 0 ? true : false}`};
-    // }
-
 }
 
 export default new PatientRepository();

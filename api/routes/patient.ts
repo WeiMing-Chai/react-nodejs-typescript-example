@@ -53,18 +53,6 @@ class User {
             this.patients.push(req.body.patient);
             patientRepository.createPatient(req).then(data => res.json(data));
         });
-
-        // // request to get all the users by userName
-        // this.express.get("/users/:userName", (req, res, next) => {
-        //     this.logger.info("url:::::" + req.url);
-        //     const user = this.patients.filter(function(user) {
-        //         if (req.params.userName === user.userName) {
-        //             return user;
-        //         }
-        //     });
-        //     res.json(user);
-        // });
-
     }
 }
 
