@@ -13,7 +13,7 @@ class PatientRepository {
         try {
             const patients = await prisma.patients.findMany();
             const information_logged = {
-                "user_id": "123",
+                "user_id": (req as any).kauth.grant.access_token.content.sub,
                 "event": EventType.retrievePatient,
                 "outcome": EventOutcome.success,
                 "ip_address": req.ip,
@@ -39,7 +39,7 @@ class PatientRepository {
                 data: req.body.patient
             });
             const information_logged = {
-                "user_id": "123",
+                "user_id": (req as any).kauth.grant.access_token.content.sub,
                 "event": EventType.registerPatient,
                 "outcome": EventOutcome.success,
                 "ip_address": req.ip,

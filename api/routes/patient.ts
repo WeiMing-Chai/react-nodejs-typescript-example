@@ -42,7 +42,7 @@ class User {
         this.express.get("/patients",  this.keycloak.enforcer(['resource:view'], {
             resource_server_id: 'predictz-gateway-client'
           }), (req, res, next) => {
-            console.log((req as any).kauth.grant)
+            console.log((req as any).kauth.grant.access_token.content.sub)
             patientRepository.getPatients(req).then(data => res.json(data));
         });
 
