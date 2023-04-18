@@ -19,8 +19,8 @@ export const DisplayBoard = (props: DisplayBoardProps) => {
 
     return(
         <div className="display-board">
-            <h4>Patients Created</h4>
-            <div className="number">
+            <h4 data-testid="h4-title">Patients Created</h4>
+            <div data-testid="numberOfUsers" className="number">
             {props.numberOfUsers}
             </div>
             <div className="btn">
